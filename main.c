@@ -5,22 +5,16 @@
 
 int main(int argc, char *argv[]) {
 	
-	FILE*fp;
+	FILE*fp = NULL;
+	char c;
 	char str[30];
-	fp = fopen("sample.txt", "w"); //fopen
 	
-	printf("input a word");
-	scanf("%s", str); //scanf
-	fprintf(fp, "%s\n", str); //fprintf
-	    
-	printf("input a word");
-	scanf("%s", str); //scanf
-	fprintf(fp, "%s\n", str); //fprintf
-	    
-	printf("input a word");
-	scanf("%s", str); //scanf
-	fprintf(fp, "%s\n", str); //fprintf
+	fp = fopen("sample.txt", "r");
 	
+	
+	while(fgets(str, 30, fp) != NULL)
+	    printf("%s", str);
+	    
 	
 	fclose(fp); //fclose
 	
