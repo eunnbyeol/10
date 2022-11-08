@@ -7,11 +7,7 @@ int main(int argc, char *argv[]) {
 	char src[] = "The worst things to eat before you sleep";
 	char dst[100];
 	
-	int i;
-	printf("원문 :%s\n", src);
-	for(i=0; src[i]!= NULL; i++)
-	    dst[i] = src[i];
-	dst[i] = NULL;
+	strcpy(dst, src);
 	
 	printf("복사본 : %s", dst);
 	
